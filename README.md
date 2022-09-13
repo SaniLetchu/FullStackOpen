@@ -1,5 +1,9 @@
 ## [Full Stack Open 2022](https://fullstackopen.com/)
 
+### Certificate
+
+![certificate-fullstack](https://user-images.githubusercontent.com/92727936/189920183-b956d5a3-ce07-49f4-adb2-8911acbb87cf.png)
+
 ### Description
 
 Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This course will introduce you to modern JavaScript-based web development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
