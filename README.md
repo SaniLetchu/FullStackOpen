@@ -20,8 +20,8 @@ Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This cou
 | 5         | Testing React apps                                             | 21/22       |    :heavy_check_mark:    |
 | 6         | State management with Redux                                    | 21/21       |    :heavy_check_mark:    |
 | 7         | React router, custom hooks, styling app with CSS and webpack   | 16/21       |    :heavy_check_mark:    |
-| 8         | GraphQL                                                        |             |                          |
-| 9         | TypeScript                                                     |             |                          |
+| 8         | GraphQL                                                        | 24/26       |    :heavy_check_mark:    |
+| 9         | TypeScript                                                     | 15/27       |                          |
 | 10        | React Native                                                   |             |                          |
 | 11        | CI/CD                                                          |             |                          |
 | 12        | Containers                                                     |             |                          |
