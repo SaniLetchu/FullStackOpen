@@ -1,20 +1,20 @@
-import { View, StyleSheet, Pressable } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Text from './Text';
+import { Link } from 'react-router-native';
 
 const styles = StyleSheet.create({
-  button: {
-    paddingTop: 20,
+  container: {
+    marginTop: 20,
+    marginRight: 20,
   },
   textStyle: {
     color: 'white',
   }
 });
 
-const AppBarTab = ({name}) => {
-  return <View>
-    <Pressable style={styles.button}>
-      <Text fontSize="subheading" style={styles.textStyle}>{name}</Text>
-    </Pressable>
+const AppBarTab = ({name, link}) => {
+  return <View style={styles.container}>
+    <Link to={link}><Text style={styles.textStyle}>{name}</Text></Link>
   </View>;
 };
 
