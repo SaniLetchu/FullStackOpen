@@ -6,7 +6,7 @@ const useLoggedIn = () => {
     fetchPolicy: 'cache-and-network',
   });
 
-  return { logged: data.me, loading };
+  return { logged: data?.me, loading };
 };
 
 export default useLoggedIn;

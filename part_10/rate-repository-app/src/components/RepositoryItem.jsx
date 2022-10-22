@@ -52,18 +52,18 @@ const RepositoryItem = ({item}) => {
       <View style={styles.rowContainer}>
         <Image style={styles.tinyLogo} source={{uri: item.ownerAvatarUrl}}></Image>
         <View style={styles.mainInformationContainer}>
-          <Text style={styles.marginText} fontWeight={'bold'}>{item.fullName}</Text>
-          <Text style={styles.marginText} color={'textSecondary'}>{item.description}</Text>
-          <Text style={styles.languageText}>{item.language}</Text>
+          <Text testID="fullName" style={styles.marginText} fontWeight={'bold'}>{item.fullName}</Text>
+          <Text testID="description" style={styles.marginText} color={'textSecondary'}>{item.description}</Text>
+          <Text testID="language" style={styles.languageText}>{item.language}</Text>
         </View>
       </View>
       <View style={styles.informationContainer}>
         <View style={styles.smallInformationContainern}>
-          <Text fontWeight={'bold'}>{kFormatter(item.stargazersCount)}</Text>
+          <Text testID="stargazersCount"  fontWeight={'bold'}>{kFormatter(item.stargazersCount)}</Text>
           <Text color={'textSecondary'}>Stars</Text>
         </View>
         <View style={styles.smallInformationContainern}>
-          <Text fontWeight={'bold'}>{kFormatter(item.forksCount)}</Text>
+          <Text testID="forksCount"  fontWeight={'bold'}>{kFormatter(item.forksCount)}</Text>
           <Text color={'textSecondary'}>Forks</Text>
         </View>
         <View style={styles.smallInformationContainern}>
