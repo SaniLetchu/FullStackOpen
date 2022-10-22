@@ -2,6 +2,7 @@ import Text from './Text';
 import { View, Pressable, StyleSheet } from 'react-native';
 import FormikTextInput from './FormikTextInput';
 import useSignIn from '../hooks/useSignIn';
+import { useNavigate } from "react-router-dom";
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
@@ -49,6 +50,7 @@ const LoginForm = ({ onSubmit }) => {
 };
 
 const SignIn = () => {
+  let navigate = useNavigate();
   const [signIn] = useSignIn();
   const initialValues = {
     username: '',
@@ -59,6 +61,7 @@ const SignIn = () => {
 
     try {
       const { data } = await signIn({ username, password });
+      navigate("/", { replace: true });    
       console.log(data);
     } catch (e) {
       console.log(e);

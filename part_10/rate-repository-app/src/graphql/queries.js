@@ -18,4 +18,11 @@ export const GET_REPOSITORIES = gql`
     }
   }
 `;
-
+export const IS_LOGGED_IN = gql`
+  query {
+    me {
+      id
+      username
+    }
+  }
+`;
