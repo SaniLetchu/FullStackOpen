@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   marginText : {
     marginBottom: 10,
-    paddingRight: 40
+    paddingRight: 60
   },
   informationContainer: {
     flexDirection: 'row',
