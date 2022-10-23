@@ -1,5 +1,6 @@
-import { View, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, Image, Pressable } from 'react-native';
 import Text from './Text';
+import { useNavigate } from 'react-router-native';
 
 function kFormatter(num) {
   return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
@@ -47,35 +48,38 @@ const styles = StyleSheet.create({
 
 
 const RepositoryItem = ({item}) => {
+  let navigate = useNavigate();
   return (
-    <View style={styles.container}>
-      <View style={styles.rowContainer}>
-        <Image style={styles.tinyLogo} source={{uri: item.ownerAvatarUrl}}></Image>
-        <View style={styles.mainInformationContainer}>
-          <Text testID="fullName" style={styles.marginText} fontWeight={'bold'}>{item.fullName}</Text>
-          <Text testID="description" style={styles.marginText} color={'textSecondary'}>{item.description}</Text>
-          <Text testID="language" style={styles.languageText}>{item.language}</Text>
+    <Pressable onPress={() => navigate(`/repository/${item.id}`)}>
+      <View style={styles.container}>
+        <View style={styles.rowContainer}>
+          <Image style={styles.tinyLogo} source={{uri: item.ownerAvatarUrl}}></Image>
+          <View style={styles.mainInformationContainer}>
+            <Text testID="fullName" style={styles.marginText} fontWeight={'bold'}>{item.fullName}</Text>
+            <Text testID="description" style={styles.marginText} color={'textSecondary'}>{item.description}</Text>
+            <Text testID="language" style={styles.languageText}>{item.language}</Text>
+          </View>
+        </View>
+        <View style={styles.informationContainer}>
+          <View style={styles.smallInformationContainern}>
+            <Text testID="stargazersCount"  fontWeight={'bold'}>{kFormatter(item.stargazersCount)}</Text>
+            <Text color={'textSecondary'}>Stars</Text>
+          </View>
+          <View style={styles.smallInformationContainern}>
+            <Text testID="forksCount"  fontWeight={'bold'}>{kFormatter(item.forksCount)}</Text>
+            <Text color={'textSecondary'}>Forks</Text>
+          </View>
+          <View style={styles.smallInformationContainern}>
+            <Text fontWeight={'bold'}>{kFormatter(item.reviewCount)}</Text>
+            <Text color={'textSecondary'}>Reviews</Text>
+          </View>
+          <View style={styles.smallInformationContainern}>
+            <Text fontWeight={'bold'}>{kFormatter(item.ratingAverage)}</Text>
+            <Text color={'textSecondary'}>Rating</Text>
+          </View>
         </View>
       </View>
-      <View style={styles.informationContainer}>
-        <View style={styles.smallInformationContainern}>
-          <Text testID="stargazersCount"  fontWeight={'bold'}>{kFormatter(item.stargazersCount)}</Text>
-          <Text color={'textSecondary'}>Stars</Text>
-        </View>
-        <View style={styles.smallInformationContainern}>
-          <Text testID="forksCount"  fontWeight={'bold'}>{kFormatter(item.forksCount)}</Text>
-          <Text color={'textSecondary'}>Forks</Text>
-        </View>
-        <View style={styles.smallInformationContainern}>
-          <Text fontWeight={'bold'}>{kFormatter(item.reviewCount)}</Text>
-          <Text color={'textSecondary'}>Reviews</Text>
-        </View>
-        <View style={styles.smallInformationContainern}>
-          <Text fontWeight={'bold'}>{kFormatter(item.ratingAverage)}</Text>
-          <Text color={'textSecondary'}>Rating</Text>
-        </View>
-      </View>
-    </View>
+    </Pressable>
   );
 };
 
