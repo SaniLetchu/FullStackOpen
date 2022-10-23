@@ -22,7 +22,7 @@ Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go! This cou
 | 7         | React router, custom hooks, styling app with CSS and webpack   | 16/21       |    :heavy_check_mark:    |
 | 8         | GraphQL                                                        | 24/26       |    :heavy_check_mark:    |
 | 9         | TypeScript                                                     | 15/27       |                          |
-| 10        | React Native                                                   | 25/27       |    :heavy_check_mark:    |
+| 10        | React Native                                                   | 24/27       |    :heavy_check_mark:    |
 | 11        | CI/CD                                                          |             |                          |
 | 12        | Containers                                                     |             |                          |
 | 13        | Using relational databases                                     |             |                          |
